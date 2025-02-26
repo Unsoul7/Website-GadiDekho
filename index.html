@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Staatliches&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+
+    <title>GadiDekho</title>
+</head>
+
+<body>
+    <nav
+        style="background-color: #333; padding: 0.2rem 1rem; display: flex; justify-content: space-between; align-items: center;">
+        <div style="color: white; font-size: 1.5rem;">
+            <img src="logo.png" alt="GadiDekho Logo" style="height: 55px; vertical-align: middle;">
+        </div>
+        <span class="material-symbols-outlined" style="color: white; font-size: 25px;" onclick="navopen()">
+            menu
+        </span>
+        <div style="font-family: 'Open Sans'; font-size: 12px;" class="sidebar">
+            <img src="close.png" style="width: 30px;" alt="" onclick="navclose()">
+            <a href="#catalogue" style="color: white; margin: 0 1rem; text-decoration: none;">Catalogue</a>
+            <a href="#about-us" style="color: white; margin: 0 1rem; text-decoration: none;">About Us</a>
+            <a href="#social-page" style="color: white; margin: 0 1rem; text-decoration: none;">Social Page</a>
+            <a href="#contact-us" style="color: white; margin: 0 1rem; text-decoration: none;">Contact Us</a>
+        </div>
+    </nav>
+
+    <header
+        style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 40px; padding: 0.2rem 1rem; border-bottom: 1px solid #333; font-size: 1.5vmax; font-family: 'Open Sans';">
+        <p>Follow Instgram: @gadidekho.in</p>
+    </header>
+
+    <main>
+        <div class="vehicle-card">
+            <img src="/assets/WhatsApp Image 2025-02-17 at 3.51.50 PM.jpeg" alt="">
+
+            <div class="vehicle-details">
+                <h2>2015 Audi Q3 2.0 TDI S Edition</h2>
+                <p>Diesel | Manual | 2nd Owner | Black Color</p>
+            </div>
+        </div>
+
+        <div class="vehicle-card">
+            <img src="assets/WhatsApp Image 2025-01-13 at 7.09.29 PM.jpeg" alt="">
+
+            <div class="vehicle-details">
+                <h2>TATA Harrier 2019 XZ</h2>
+                <p>Diesel | Manual | 2nd Owner | White Color</p>
+            </div>
+        </div>
+
+        <div class="vehicle-card">
+            <img src="assets/WhatsApp Image 2025-02-26 at 4.28.42 PM.jpeg" alt="">
+
+            <div class="vehicle-details">
+                <h2>Mahindra Thar 2022 LX - 4x4</h2>
+                <p>Petrol |  Automatic | 1st Owner | Black Color</p>
+            </div>
+        </div>
+
+        <div class="vehicle-card">
+            <img src="assets/WhatsApp Image 2025-02-26 at 4.31.15 PM (1).jpeg" alt="">
+
+            <div class="vehicle-details">
+                <h2>Hyundai Creta SX Plus</h2>
+                <p>Petrol | Manual | 2nd Owner | Silver Color</p>
+            </div>
+        </div>
+
+        <div class="vehicle-card">
+            <img src="assets/WhatsApp Image 2025-02-26 at 4.34.01 PM (1).jpeg" alt="">
+
+            <div class="vehicle-details">
+            <h2>Suzuki Swift 2018 ZXI - AMT</h2>
+                <p>Petrol | Automatic | 2nd Owner | 2018 Model</p>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background-color: #333; padding: 0.2rem 1rem; display: flex; flex-direction: column;  justify-content: space-between; align-items: center; padding: 20px 0; gap: 20px;">
+        <div style="color: white; display: flex; justify-content: center; width: 100%; gap: 20px;">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div style="font-family: 'Open Sans'; font-size: 12px; color: white;">
+            &copy; 2024 - Copyright By GadiDekho
+        </div>
+        
+    </footer>
+
+
+    <script>
+        function navopen() {
+            var x = document.querySelector('.sidebar');
+            x.classList.toggle('active');
+        }
+
+        function navclose() {
+            var x = document.querySelector('.sidebar');
+            x.classList.remove('active');
+        }
+
+        let count = 1;
+
+        setInterval(() => {
+            if (count % 2 === 0) {
+                document.querySelector('header').innerHTML = "<a style='color: rgb(255, 40, 76); text-decoration:none; display:flex; flex-direction:row; align-items:center;' href='https://www.instagram.com/gadidekho.in'><i class='fa-brands fa-square-instagram'style=' font-size:15px; padding:0 5px; border-radius:20px;'></i>Follow GadiDekho on Instagram</a>";
+            } else {
+                document.querySelector('header').innerHTML = "<a style='color: rgb(49, 214, 46); text-decoration:none; display:flex; flex-direction:row; align-items:center;' href='https://wa.me/c/919266110092'><i class='fa-brands fa-square-whatsapp' style='font-size:15px; padding:5px; border-radius:20px;'></i>Checkout Catalogue of Premium Cars</a>";
+            }
+            count++;
+        }, 3000);
+
+    </script>
+
+</body>
+
+</html>
